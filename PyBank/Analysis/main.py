@@ -45,7 +45,7 @@ maxmonthloss = months[netchange.index(maxprofitloss) + 1]
 
 # Summary output
 print(f"""
-Finacial Analysis
+Financial Analysis
 ------------------------
 Total Months: {monthtotal}
 Total: ${totalprofitmargin}
@@ -57,7 +57,7 @@ Greatest Decrease in Profits: {maxmonthloss} (${maxprofitloss})"""
 # Financial Analysis exported as a text file
 with open("PyBankAnalysis.txt", "w", newline="") as textfile:
     textfile.write(f"""
-Finacial Analysis
+Financial Analysis
 ------------------------
 Total Months: {monthtotal}
 Total: ${totalprofitmargin}
