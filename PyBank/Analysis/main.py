@@ -1,4 +1,4 @@
-import os 
+import os.path 
 import csv
 from statistics import mean
 
@@ -54,5 +54,15 @@ Greatest Increase in Profits: {maxmonthgain} (${maxprofitgain})
 Greatest Decrease in Profits: {maxmonthloss} (${maxprofitloss})"""
 )
 
-
+# Financial Analysis exported as a text file
+with open("PyBankAnalysis.txt", "w", newline="") as textfile:
+    textfile.write(f"""
+Finacial Analysis
+------------------------
+Total Months: {monthtotal}
+Total: ${totalprofitmargin}
+Average Change: ${round(averageprofitchange, ndigits= 2)}
+Greatest Increase in Profits: {maxmonthgain} (${maxprofitgain})
+Greatest Decrease in Profits: {maxmonthloss} (${maxprofitloss})"""
+)
 
